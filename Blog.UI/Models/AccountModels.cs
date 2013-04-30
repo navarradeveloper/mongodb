@@ -8,6 +8,8 @@ using System.Web.Security;
 
 namespace Blog.UI.Models
 {
+
+    /*
     public class UsersContext : DbContext
     {
         public UsersContext()
@@ -94,4 +96,5 @@ namespace Blog.UI.Models
         public string ProviderDisplayName { get; set; }
         public string ProviderUserId { get; set; }
     }
+*/
 }

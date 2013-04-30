@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MongoDB.Bson, Version=1.8.1.20, Culture=neutral, PublicKeyToken=f686731cfb9cc103, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\mongocsharpdriver.1.8.1\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +56,10 @@
     <ProjectReference Include="..\Blog.Entities\Blog.Entities.csproj">
       <Project>{fd857494-e2ab-42fa-a15c-6df340fb7eb2}</Project>
       <Name>Blog.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Blog.Extensions\Blog.Extensions.csproj">
+      <Project>{f0efc1fc-1e40-460f-9fc1-1d4970ab905a}</Project>
+      <Name>Blog.Extensions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

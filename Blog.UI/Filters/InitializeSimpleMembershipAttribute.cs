@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
+//using System.Data.Entity.Infrastructure;
 using System.Threading;
 using System.Web.Mvc;
 using WebMatrix.WebData;
@@ -8,6 +8,7 @@ using Blog.UI.Models;
 
 namespace Blog.UI.Filters
 {
+/*
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public sealed class InitializeSimpleMembershipAttribute : ActionFilterAttribute
     {
@@ -47,4 +48,5 @@ namespace Blog.UI.Filters
             }
         }
     }
+ */
 }

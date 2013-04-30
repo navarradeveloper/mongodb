@@ -14,6 +14,6 @@ namespace Blog.BL
 
         void Save(Post post);
         IList<Post> GetAllPosts();
-
+        Post GetOnePost(String urlName);
     }
 }

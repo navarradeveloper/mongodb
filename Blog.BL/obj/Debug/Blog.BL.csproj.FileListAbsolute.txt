@@ -11,3 +11,5 @@ C:\Proyectos\Pruebas\Blog\Blog.BL\obj\Debug\Blog.BL.dll
 C:\Proyectos\Pruebas\Blog\Blog.BL\obj\Debug\Blog.BL.pdb
 C:\Proyectos\Pruebas\Blog\Blog.BL\bin\Debug\MongoDB.Driver.dll
 C:\Proyectos\Pruebas\Blog\Blog.BL\bin\Debug\MongoDB.Driver.xml
+C:\Proyectos\Pruebas\Blog\Blog.BL\bin\Debug\Blog.Extensions.dll
+C:\Proyectos\Pruebas\Blog\Blog.BL\bin\Debug\Blog.Extensions.pdb

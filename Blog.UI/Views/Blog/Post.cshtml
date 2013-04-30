@@ -1,0 +1,36 @@
+﻿@model Blog.Entities.Entities.Post
+
+@{
+    ViewBag.Title = "Post";
+}
+
+<h2>Post</h2>
+
+<fieldset>
+    <legend>Post</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Summary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Summary)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Details)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Details)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Url }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

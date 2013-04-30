@@ -1,0 +1,9 @@
+C:\Proyectos\Pruebas\Blog\BlogTests\bin\Debug\BlogTests.dll
+C:\Proyectos\Pruebas\Blog\BlogTests\bin\Debug\BlogTests.pdb
+C:\Proyectos\Pruebas\Blog\BlogTests\bin\Debug\nunit.core.dll
+C:\Proyectos\Pruebas\Blog\BlogTests\bin\Debug\nunit.core.interfaces.dll
+C:\Proyectos\Pruebas\Blog\BlogTests\bin\Debug\nunit.framework.dll
+C:\Proyectos\Pruebas\Blog\BlogTests\bin\Debug\nunit.framework.xml
+C:\Proyectos\Pruebas\Blog\BlogTests\obj\Debug\BlogTests.csprojResolveAssemblyReference.cache
+C:\Proyectos\Pruebas\Blog\BlogTests\obj\Debug\BlogTests.dll
+C:\Proyectos\Pruebas\Blog\BlogTests\obj\Debug\BlogTests.pdb

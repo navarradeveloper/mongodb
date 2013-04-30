@@ -8,35 +8,24 @@ using Blog.Entities.Entities;
 
 namespace Blog.UI.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
 
-
-        private IPostService _postService;
-
-        public HomeController(IPostService srv) {
-            _postService = srv;
-        }
-
-        public ActionResult Index()
-        {
-
-            IList<Post> posts =  _postService.GetAllPosts();
+        public ActionResult Index() {
             return View();
         }
 
-        public ActionResult About()
-        {
+        public ActionResult About() {
             ViewBag.Message = "Your app description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
-        {
+        public ActionResult Contact() {
             ViewBag.Message = "Your contact page.";
 
             return View();
         }
+
     }
 }

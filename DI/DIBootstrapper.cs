@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Configuration;
+using System.Web.Mvc;
 using Blog.BL;
 using Microsoft.Practices.Unity;
 
@@ -19,8 +20,8 @@ namespace DI
             container.RegisterType<IPostService, PostService>(new PerResolveLifetimeManager());
 
 
-            //container.RegisterType<Blog.DA.IDAContext, Blog.DA.DAContext>(new PerResolveLifetimeManager(), new InjectionConstructor(ConfigurationManager.ConnectionStrings["ProzittiEntities"].ConnectionString));
-            container.RegisterType<Blog.DA.IDAContext, Blog.DA.DAContext>(new PerResolveLifetimeManager(), new InjectionConstructor("server=127.0.0.1;database=blog"));
+            container.RegisterType<Blog.DA.IDAContext, Blog.DA.DAContext>(new PerResolveLifetimeManager(), new InjectionConstructor(ConfigurationManager.ConnectionStrings["MongoDB"].ConnectionString));
+            //container.RegisterType<Blog.DA.IDAContext, Blog.DA.DAContext>(new PerResolveLifetimeManager(), new InjectionConstructor("server=127.0.0.1;database=blog"));
 
             //container.RegisterType<IMembershipService, AccountMembershipService>(new PerResolveLifetimeManager());
             

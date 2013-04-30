@@ -13,9 +13,11 @@ using Blog.UI.Models;
 
 namespace Blog.UI.Controllers
 {
+
+    /*
     [Authorize]
     [InitializeSimpleMembership]
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         //
         // GET: /Account/Login
@@ -404,4 +406,5 @@ namespace Blog.UI.Controllers
         }
         #endregion
     }
+     * */
 }

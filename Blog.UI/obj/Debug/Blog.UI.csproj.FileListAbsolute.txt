@@ -7,7 +7,6 @@ C:\Proyectos\Pruebas\Blog\Blog.UI\bin\DotNetOpenAuth.OAuth.Consumer.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\DotNetOpenAuth.OAuth.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\DotNetOpenAuth.OpenId.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
-C:\Proyectos\Pruebas\Blog\Blog.UI\bin\EntityFramework.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Microsoft.Web.Infrastructure.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Microsoft.Web.WebPages.OAuth.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Newtonsoft.Json.dll
@@ -24,7 +23,6 @@ C:\Proyectos\Pruebas\Blog\Blog.UI\bin\System.Web.WebPages.Razor.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\WebGrease.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\WebMatrix.Data.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\WebMatrix.WebData.dll
-C:\Proyectos\Pruebas\Blog\Blog.UI\bin\EntityFramework.xml
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Newtonsoft.Json.xml
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\System.Net.Http.Formatting.xml
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\System.Web.Helpers.xml
@@ -60,3 +58,5 @@ C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Microsoft.Practices.Unity.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\DI.pdb
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\MongoDB.Driver.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\MongoDB.Driver.xml
+C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Blog.Extensions.dll
+C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Blog.Extensions.pdb

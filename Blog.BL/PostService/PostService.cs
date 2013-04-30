@@ -25,6 +25,9 @@ namespace Blog.BL
             return Context.Post.All().ToList<Post>();
         }
 
+        public Post GetOnePost(String urlName) { 
+            return Context.Post.Find(p=> p.Url.Equals(urlName.ToLower()));
+        }
 
     }
 }

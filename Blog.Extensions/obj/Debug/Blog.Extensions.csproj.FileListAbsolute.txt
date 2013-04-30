@@ -1,0 +1,5 @@
+C:\Proyectos\Pruebas\Blog\Blog.Extensions\bin\Debug\Blog.Extensions.dll
+C:\Proyectos\Pruebas\Blog\Blog.Extensions\bin\Debug\Blog.Extensions.pdb
+C:\Proyectos\Pruebas\Blog\Blog.Extensions\obj\Debug\Blog.Extensions.csprojResolveAssemblyReference.cache
+C:\Proyectos\Pruebas\Blog\Blog.Extensions\obj\Debug\Blog.Extensions.dll
+C:\Proyectos\Pruebas\Blog\Blog.Extensions\obj\Debug\Blog.Extensions.pdb
