@@ -1,0 +1,12 @@
+C:\Proyectos\Pruebas\Blog\Blog.DA\obj\Debug\Blog.DA.csprojResolveAssemblyReference.cache
+C:\Proyectos\Pruebas\Blog\Blog.DA\bin\Debug\Blog.DA.dll.config
+C:\Proyectos\Pruebas\Blog\Blog.DA\bin\Debug\Blog.DA.dll
+C:\Proyectos\Pruebas\Blog\Blog.DA\bin\Debug\Blog.DA.pdb
+C:\Proyectos\Pruebas\Blog\Blog.DA\bin\Debug\Blog.Entities.dll
+C:\Proyectos\Pruebas\Blog\Blog.DA\bin\Debug\MongoDB.Bson.dll
+C:\Proyectos\Pruebas\Blog\Blog.DA\bin\Debug\Blog.Entities.pdb
+C:\Proyectos\Pruebas\Blog\Blog.DA\bin\Debug\MongoDB.Bson.xml
+C:\Proyectos\Pruebas\Blog\Blog.DA\obj\Debug\Blog.DA.dll
+C:\Proyectos\Pruebas\Blog\Blog.DA\obj\Debug\Blog.DA.pdb
+C:\Proyectos\Pruebas\Blog\Blog.DA\bin\Debug\MongoDB.Driver.dll
+C:\Proyectos\Pruebas\Blog\Blog.DA\bin\Debug\MongoDB.Driver.xml
