@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Blog.Entities.Entities;
+using MongoDB.Bson;
+using MongoDB.Driver.Builders;
 
 namespace Blog.DA
 {
@@ -15,12 +17,15 @@ namespace Blog.DA
 
 
 
-        public new IQueryable<Post> All() {
-            throw new NotImplementedException();
+
+        public void SaveComment(ObjectId postId, Comment comment) {
+            Context.DB.GetCollection<Post>("post").Update(Query.EQ("_id", postId), MongoDB.Driver.Builders.Update.PushWrapped("Comments", comment).Inc("TotalComments", 1));
         }
 
+        /*
         public void Dispose() {
             throw new NotImplementedException();
         }
+         * */
     }
 }

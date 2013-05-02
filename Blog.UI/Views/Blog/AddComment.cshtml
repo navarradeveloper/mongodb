@@ -1,0 +1,14 @@
+﻿@model Blog.Entities.Entities.Comment
+
+@using (Html.BeginForm("post", "Blog", FormMethod.Post))
+{
+    <input name="PostId" type="hidden" value="@ViewData.Values.FirstOrDefault()" />
+    <div>
+        Add Comment
+        <br />
+        @Html.TextAreaFor(m => m.Detail)
+        @Html.ValidationMessageFor(m => m.Detail)
+        <br />
+        <input type="submit" value="Add Comment" />
+    </div>
+}

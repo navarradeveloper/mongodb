@@ -111,8 +111,7 @@ namespace Blog.DA
 
         public virtual bool Delete(BsonValue key) {
             try {
-                var query = Query.EQ("_id", key.ToString());
-                var result = DbSet.Remove(query);
+                var result = DbSet.Remove(Query.EQ("_id", key));
                 return result.Ok;
             } catch (Exception ex) {
                 return false;
@@ -127,8 +126,6 @@ namespace Blog.DA
                 return false;
             }
         }
-
-       
         
 
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using MongoDB.Bson;
@@ -31,12 +32,12 @@ namespace Blog.Entities.Entities
         [ScaffoldColumn(false)]
         public string Author { get; set; }
 
-        /*
+        
         [ScaffoldColumn(false)]
         public int TotalComments { get; set; }
 
         [ScaffoldColumn(false)]
         public IList<Comment> Comments { get; set; }
-         * */
+         
     }
 }

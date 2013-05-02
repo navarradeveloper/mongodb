@@ -34,3 +34,17 @@
     @Html.ActionLink("Edit", "Edit", new { id=Model.Url }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+ 
+<div id="add-comment">
+     @Html.Partial("AddComment", new Blog.Entities.Entities.Comment(),new ViewDataDictionary{{"PostId",Model.PostId}})
+</div>
+ 
+
+<div id="comment-list">
+   
+    @if (Model.Comments != null)
+    {
+         <h3>Comments</h3>     
+        Html.RenderPartial("CommentList", Model.Comments);
+    }
+</div>

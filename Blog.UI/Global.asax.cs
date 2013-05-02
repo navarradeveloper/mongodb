@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using DI;
+using MongoDB.Bson;
 
 namespace Blog.UI
 {
@@ -25,6 +26,9 @@ namespace Blog.UI
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
 
+            // Cargo los Binders Propios
+            ModelBinders.Binders.Add(typeof(ObjectId), new ObjectIdBinder());
+            // Empiezo la Injección
             DIBootstrapper.Run();
         }
     }

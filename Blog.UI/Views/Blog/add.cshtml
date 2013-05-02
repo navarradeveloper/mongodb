@@ -1,13 +1,13 @@
 ﻿@model Blog.Entities.Entities.Post
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "add";
 }
 
-<h2>Edit</h2>
+<h2>add</h2>
 
 @using (Html.BeginForm()) {
-    Html.HiddenFor(model => model.PostId);
+    Html.ValidationSummary(true);
     Html.RenderPartial("post_form");
 }
 
