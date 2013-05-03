@@ -15,17 +15,14 @@ namespace Blog.DA
             : base(context)
         { }
 
-
-
-
         public void SaveComment(ObjectId postId, Comment comment) {
             Context.DB.GetCollection<Post>("post").Update(Query.EQ("_id", postId), MongoDB.Driver.Builders.Update.PushWrapped("Comments", comment).Inc("TotalComments", 1));
         }
 
-        /*
-        public void Dispose() {
-            throw new NotImplementedException();
+        public void DeleteComment(Post post, ObjectId commentID) {
+            var update = MongoDB.Driver.Builders.Update.Pull("Comments", Query.EQ("_id", commentID));
+            Context.DB.GetCollection<Post>("post").Update(Query.EQ("_id", post.PostId),update);
         }
-         * */
+      
     }
 }

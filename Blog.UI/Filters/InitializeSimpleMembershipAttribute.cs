@@ -8,7 +8,7 @@ using Blog.UI.Models;
 
 namespace Blog.UI.Filters
 {
-/*
+    /*
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
     public sealed class InitializeSimpleMembershipAttribute : ActionFilterAttribute
     {

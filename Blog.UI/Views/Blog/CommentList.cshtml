@@ -1,4 +1,14 @@
-﻿@model IList<Blog.Entities.Entities.Comment>
+﻿@model IList<Comment>
 
-@Model.Count
+@if (Model.Count > 0) {
+    <ul>
+    @foreach (Comment comment in Model) {
+        <li>
+            @Html.RouteLink("Borrar","Default",new {action = "deletecomment", id = ViewData.Values.FirstOrDefault(), commentID = comment.CommentId })
+            <strong>@comment.Date</strong>
+            <p>@comment.Detail</p>
+        </li>
+    }
+    </ul>
+}
 

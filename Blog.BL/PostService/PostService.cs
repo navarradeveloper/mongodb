@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Blog.DA;
 using Blog.Entities.Entities;
 using MongoDB.Bson;
@@ -38,10 +36,13 @@ namespace Blog.BL
         }
 
         public void SaveComment(ObjectId postId,Comment comment){
-
+            comment.CommentId = ObjectId.GenerateNewId();
+            comment.Date = DateTime.Now;
             Context.Post.SaveComment(postId,comment);
-           
-            
+        }
+
+        public void  DeleteComment(Post post, ObjectId commentID){
+            Context.Post.DeleteComment(post, commentID);
         }
 
     }

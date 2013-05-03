@@ -177,6 +177,7 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\CustomMembershipProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -307,6 +308,10 @@
     <ProjectReference Include="..\Blog.BL\Blog.BL.csproj">
       <Project>{38898f62-fe11-4f6d-8de4-e2edb4a5d573}</Project>
       <Name>Blog.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Blog.DA\Blog.DA.csproj">
+      <Project>{55e354f4-a82e-453d-bca9-e4ecc8d30117}</Project>
+      <Name>Blog.DA</Name>
     </ProjectReference>
     <ProjectReference Include="..\Blog.Entities\Blog.Entities.csproj">
       <Project>{fd857494-e2ab-42fa-a15c-6df340fb7eb2}</Project>

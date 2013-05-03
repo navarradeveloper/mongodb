@@ -88,6 +88,13 @@ namespace Blog.UI.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult DeleteComment(String id, ObjectId commentID) {
+            Post post = _postService.GetOnePost(id);
+            if (post == null) { return new HttpNotFoundResult(); }
+            _postService.DeleteComment(post,commentID);
+            return RedirectToAction("post", new { id=id });
+        }
+
        
 
 

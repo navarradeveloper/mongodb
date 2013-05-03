@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Entities\Comment.cs" />
     <Compile Include="Entities\Post.cs" />
+    <Compile Include="Entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

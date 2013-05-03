@@ -45,6 +45,6 @@
     @if (Model.Comments != null)
     {
          <h3>Comments</h3>     
-        Html.RenderPartial("CommentList", Model.Comments);
+        @Html.Partial("CommentList", Model.Comments.AsQueryable().OrderByDescending(m=>m.Date).ToList(),new ViewDataDictionary{{"PostId",Model.Url}});
     }
 </div>
