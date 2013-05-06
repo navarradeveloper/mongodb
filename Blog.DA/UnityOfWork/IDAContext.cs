@@ -9,5 +9,6 @@ namespace Blog.DA
     public interface IDAContext : IDisposable
     {
         IPostRepository Post { get; }
+        IUserRepository User { get; }
     }
 }

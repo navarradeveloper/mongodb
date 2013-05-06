@@ -4,22 +4,33 @@ using System.Configuration;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Web;
+using System.Threading.Tasks;
 using System.Web.Security;
-using Blog.BL;
 using Blog.Entities.Entities;
+using MongoDB.Bson;
 
-namespace Blog.UI.Providers
+namespace Blog.Web.Security
 {
     public class CustomMembershipProvider : WebMatrix.WebData.ExtendedMembershipProvider
-
     {
-        private IUserService _userService;
+        private IUserBBDD _userService;
 
         public CustomMembershipProvider() {
-            _userService = new UserService(new Blog.DA.DAContext(ConfigurationManager.ConnectionStrings["MongoDB"].ConnectionString)); ;
+            _userService = new UserBBDD(new Blog.DA.DAContext(ConfigurationManager.ConnectionStrings["MongoDB"].ConnectionString)); ;
         }
 
+        /// <summary>
+        /// Create a User in MogoDB 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <param name="email"></param>
+        /// <param name="passwordQuestion"></param>
+        /// <param name="passwordAnswer"></param>
+        /// <param name="isApproved"></param>
+        /// <param name="providerUserKey"></param>
+        /// <param name="status"></param>
+        /// <returns></returns>
         public override MembershipUser CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer,
             bool isApproved, object providerUserKey, out MembershipCreateStatus status) {
             ValidatePasswordEventArgs args = new ValidatePasswordEventArgs(username, password, true);
@@ -35,14 +46,15 @@ namespace Blog.UI.Providers
                 return null;
             }
 
-            //MembershipUser user = GetUser(username, true);
-            MembershipUser user = null;
+            MembershipUser user = GetUser(username, true);
 
             if (user == null) {
                 User userObj = new User();
-                userObj.Name= username;
-                //userObj.Password = GetSHA1Hash(password);
-                userObj.Email = email;
+                userObj.UserId = ObjectId.GenerateNewId();
+                userObj.Name = username;
+                userObj.NameNormalize = username.ToUrl();
+                userObj.Password = GetMD5Hash(password);
+                userObj.Email = email.ToLower();
 
                 _userService.RegisterUser(userObj);
 
@@ -56,6 +68,12 @@ namespace Blog.UI.Providers
             return null;
         }
 
+        /// <summary>
+        /// Gets a MemberShip user is exists en DDBB
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="userIsOnline"></param>
+        /// <returns></returns>
         public override MembershipUser GetUser(string username, bool userIsOnline) {
             User user = _userService.GetUser(username);
             if (user != null) {
@@ -71,20 +89,32 @@ namespace Blog.UI.Providers
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="providerUserKey"></param>
+        /// <param name="userIsOnline"></param>
+        /// <returns></returns>
         public override MembershipUser GetUser(object providerUserKey, bool userIsOnline) {
-            throw new NotImplementedException();
+            User user = _userService.GetUser(new ObjectId(providerUserKey.ToString()));
+            if (user != null) {
+                MembershipUser memUser = new MembershipUser("CustomMembershipProvider",
+                                               user.Name, user.UserId, user.Email,
+                                               string.Empty, string.Empty,
+                                               true, false, DateTime.MinValue,
+                                               DateTime.MinValue,
+                                               DateTime.MinValue,
+                                               DateTime.Now, DateTime.Now);
+                return memUser;
+            }
+            return null;
         }
 
         public override bool ValidateUser(string username, string password) {
-            /*
-            string sha1Pswd = GetMD5Hash(password);
-            User user = new User();
-            UserObj userObj = user.GetUserObjByUserName(username, sha1Pswd);
-            if (userObj != null)
-                return true;
+            string md5Pswd = GetMD5Hash(password);
+            User user = _userService.GetUserByNameAndPassword(username, md5Pswd);
+            if (user != null) return true;
             return false;
-             * */
-            return true;
         }
 
         public static string GetMD5Hash(string value) {
@@ -97,13 +127,16 @@ namespace Blog.UI.Providers
             return sBuilder.ToString();
         }
 
-        
+
         public override bool RequiresUniqueEmail {
-            //TODO: PONER UN TRUE AQUI COMO UNA CASA //////////////////////////////////////////////////////////////////////////////////
-            get { return false; }
+            get { return true; }
         }
         public override string GetUserNameByEmail(string email) {
-            throw new NotImplementedException();
+            User user = _userService.GetUserByEmail(email);
+            if (user != null) {
+                return user.Email;
+            }
+            return String.Empty;
         }
 
 
@@ -193,7 +226,7 @@ namespace Blog.UI.Providers
             throw new NotImplementedException();
         }
 
-       
+
 
         public override bool IsConfirmed(string userName) {
             throw new NotImplementedException();
@@ -252,10 +285,6 @@ namespace Blog.UI.Providers
             throw new NotImplementedException();
         }
 
-       
-
-       
-
         public override int MaxInvalidPasswordAttempts {
             get { throw new NotImplementedException(); }
         }
@@ -284,7 +313,7 @@ namespace Blog.UI.Providers
             get { return false; }
         }
 
-       
+
 
         public override string ResetPassword(string username, string answer) {
             throw new NotImplementedException();
@@ -298,6 +327,6 @@ namespace Blog.UI.Providers
             throw new NotImplementedException();
         }
 
-       
+
     }
 }

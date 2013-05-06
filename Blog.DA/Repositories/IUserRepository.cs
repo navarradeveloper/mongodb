@@ -5,11 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Blog.Entities.Entities;
 
-namespace Blog.BL
+namespace Blog.DA
 {
-    public interface IUserService
+    public interface IUserRepository : IRepository<User>
     {
-        void RegisterUser(User user);
-        User GetUser(String userName);
     }
 }

@@ -39,10 +39,12 @@ namespace Blog.UI.Controllers
             return View(post);
         }
 
+        [Authorize]
         public ActionResult add() {
             return View();
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult Add(Post post) {
             if (ModelState.IsValid) {

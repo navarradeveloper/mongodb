@@ -12,6 +12,7 @@ namespace Blog.DA
         #region Fields
         private MyContext dbContext;
         private IPostRepository _post;
+        private IUserRepository _user;
         #endregion
 
         #region Constructors
@@ -29,6 +30,14 @@ namespace Blog.DA
                 if (_post == null)
                     _post = new PostRepository(dbContext);
                 return _post;
+            }
+        }
+
+        public IUserRepository User {
+            get {
+                if (_user == null)
+                    _user = new UserRepository(dbContext);
+                return _user;
             }
         }
 

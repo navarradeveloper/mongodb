@@ -60,3 +60,5 @@ C:\Proyectos\Pruebas\Blog\Blog.UI\bin\MongoDB.Driver.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\MongoDB.Driver.xml
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Blog.Extensions.dll
 C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Blog.Extensions.pdb
+C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Blog.Web.Security.dll
+C:\Proyectos\Pruebas\Blog\Blog.UI\bin\Blog.Web.Security.pdb

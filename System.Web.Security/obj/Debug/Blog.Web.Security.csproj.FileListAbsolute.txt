@@ -1,0 +1,15 @@
+C:\Proyectos\Pruebas\Blog\System.Web.Security\obj\Debug\Blog.Web.Security.csprojResolveAssemblyReference.cache
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\Blog.DA.dll
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\Blog.Entities.dll
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\MongoDB.Bson.dll
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\MongoDB.Driver.dll
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\Blog.DA.pdb
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\Blog.Entities.pdb
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\MongoDB.Bson.xml
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\MongoDB.Driver.xml
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\Blog.Web.Security.dll
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\Blog.Web.Security.pdb
+C:\Proyectos\Pruebas\Blog\System.Web.Security\obj\Debug\Blog.Web.Security.dll
+C:\Proyectos\Pruebas\Blog\System.Web.Security\obj\Debug\Blog.Web.Security.pdb
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\Blog.Extensions.dll
+C:\Proyectos\Pruebas\Blog\System.Web.Security\bin\Debug\Blog.Extensions.pdb

@@ -16,6 +16,8 @@ namespace Blog.Entities.Entities
 
         public string Name { get; set; }
 
+        public string NameNormalize { get; set; }
+
         [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
