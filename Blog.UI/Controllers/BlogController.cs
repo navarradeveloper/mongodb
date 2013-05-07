@@ -39,7 +39,7 @@ namespace Blog.UI.Controllers
             return View(post);
         }
 
-        [Authorize]
+        [Authorize(Roles = "members,admin")]
         public ActionResult add() {
             return View();
         }

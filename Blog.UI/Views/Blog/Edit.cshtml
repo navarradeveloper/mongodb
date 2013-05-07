@@ -7,7 +7,7 @@
 <h2>Edit</h2>
 
 @using (Html.BeginForm()) {
-    Html.HiddenFor(model => model.PostId);
+    @Html.HiddenFor(model => model.PostId);
     Html.RenderPartial("post_form");
 }
 

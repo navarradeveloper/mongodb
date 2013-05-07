@@ -1,0 +1,5 @@
+﻿@model System.String
+@Html.Script(
+    @<script type="text/javascript" src="@Url.Content("~/Scripts/mikel.js")"></script>
+)
+@Html.TextArea("",Model, new{id = "tinymce" })
